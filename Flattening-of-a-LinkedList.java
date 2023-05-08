@@ -36,3 +36,15 @@ class Node
             else temp.bottom = b;
             return res.bottom;
         }
+
+        Node flatten(Node root)
+        {
+            if( root == null || root.next == null){
+                return root;
+            }
+                
+            root.next = flatten(root.next);
+            root = mergeTwoLists(root,root.next);
+            return root;
+            
+        }
