@@ -17,7 +17,11 @@ class Solution {
             st.push(i);
         }
 
-        
+        int[] lb = new int[heights.length];
+        st.clear();
+        st.push(0);
+        lb[0] = -1;
+
 
         for(int i =1;i<heights.length;i++){
             while(st.size() > 0 && heights[i] <= heights[st.peek()]){
