@@ -21,6 +21,7 @@ class Solution {
         st.clear();
         st.push(0);
         lb[0] = -1;
+        
 
 
         for(int i =1;i<heights.length;i++){
